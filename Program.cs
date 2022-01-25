@@ -13,7 +13,7 @@ namespace GuessingGame
 
             Console.WriteLine("Welcome to Guessing Game!");
             
-            Console.WriteLine("Choose your difficulty: easy, medium or hard. ");
+            Console.WriteLine("Choose your difficulty: easy, medium, hard, or cheatmode. ");
             string difficulty = Console.ReadLine();
             Console.WriteLine($"You chose {difficulty}.");
 
@@ -28,6 +28,10 @@ namespace GuessingGame
             else if (difficulty == "hard")
             {
                 guesses = 4;
+            }
+            else if (difficulty == "cheatmode")
+            {
+                guesses = 99;
             }
 
             while (guesses > 0)
